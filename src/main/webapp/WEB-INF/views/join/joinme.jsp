@@ -1,4 +1,5 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="main">
     <div class="mt-5">
@@ -28,30 +29,30 @@
     <div class="card card-body bg-light mt-5 mx-3">
         <h3 class="mb-5">일반회원</h3>
 
-        <form id="joinfrm1" name="joinfrm1">
+        <form id="joinfrm" name="joinfrm">
             <div class="row">
                 <div class="row col-11 offset-1 mb-3 align-items-center">
                     <label for="name" class="col-2 form-label text-danger text-end">이름</label>
                     <div class="col-3">
-                        <input type="text" name="name" id="name"
-                               class="form-control border-danger bg-light" readonly>
+                        <input type="text" name="name" id="name" readonly
+                               class="form-control border-danger bg-light" value="${mb.name}">
                     </div>
                 </div>
                 <div class="row col-11 offset-1 mb-3 align-items-center">
                     <label for="jumin1" class="col-2 form-label text-danger text-end">주민번호</label>
                     <div class="col-3">
-                        <input type="text" name="jumin1" id="jumin1"
-                               class="form-control border-danger bg-light" readonly>
+                        <input type="text" name="jumin1" id="jumin1a" readonly
+                               class="form-control border-danger bg-light" value="${mb.jumin1}">
                     </div>
                     <div class="col-3">
-                        <input type="text" name="jumin2" id="jumin2"
-                               class="form-control border-danger bg-light" readonly>
+                        <input type="text" name="jumin2" id="jumin2a" readonly
+                               class="form-control border-danger bg-light" value="${mb.jumin2}">
                     </div>
                 </div>
                 <div class="row col-11 offset-1 mb-3 align-items-center">
                     <label for="uid" class="col-2 form-label text-danger text-end">아이디</label>
                     <div class="col-3">
-                        <input type="text" name="userid" id="uid"
+                        <input type="text" name="uid" id="uid"
                                class="form-control border-danger">
                     </div>
                     <div class="col-auto">
@@ -75,7 +76,7 @@
                 <div class="row col-11 offset-1 mb-3 align-items-center">
                     <label for="repwd" class="col-2 form-label text-danger text-end">비밀번호 확인</label>
                     <div class="col-3">
-                        <input type="text" name="repwd" id="repwd"
+                        <input type="password" name="repwd" id="repwd"
                                class="form-control border-danger">
                     </div>
                     <div class="col-auto">

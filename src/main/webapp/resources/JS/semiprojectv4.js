@@ -27,17 +27,13 @@ noagree?.addEventListener('click', () => {
 })
 
 // ------------------------------------------ checkme
-const name2 = document.querySelector('#name2');
-const jumin1 = document.querySelector('#jumin1');
-const jumin2 = document.querySelector('#jumin2');
-const chkjumin = document.querySelector('#chkjumin');
+const chkfrm2 = document.forms.checkfrm2;
 const chkbtn2 = document.querySelector('#check2btn');
-const chkfrm2 = document.querySelector('#checkfrm2');
 chkbtn2?.addEventListener('click', () => {
-    if (name2.value == '') alert('이름을 입력하세요!!');
-    else if (jumin1.value == '') alert('주민번호를 입력하세요!');
-    else if (jumin2.value == '') alert('나머지 주민번호를 입력하세요!!');
-    else if (!chkjumin.checked) alert('주민번호 처리에 동의하세요!!');
+    if (chkfrm2.name2.value === '') alert('이름을 입력하세요!!');
+    else if (chkfrm2.jumin1.value === '') alert('주민번호를 입력하세요!');
+    else if (chkfrm2.jumin2.value === '') alert('나머지 주민번호를 입력하세요!!');
+    else if (!chkfrm2.chkjumin.checked) alert('주민번호 처리에 동의하세요!!');
     else {
         chkfrm2.method = 'post';
         chkfrm2.action = '/join/joinme';
@@ -46,5 +42,22 @@ chkbtn2?.addEventListener('click', () => {
 })
 
 // ------------------------------------------ joinme
+const joinfrm = document.forms.joinfrm;
+const joinbtn = document.querySelector('#joinbtn');
+
+joinbtn?.addEventListener('click', () => {
+    if (joinfrm.uid.value === '') alert('아이디를 입력하세요!');
+    else if (joinfrm.pwd.value === '') alert('비밀번호를 입력하세요!');
+    else if (joinfrm.repwd.value === '') alert('비밀번호 확인을 입력하세요!');
+    else if (joinfrm.pwd.value !== joinfrm.repwd.value) alert('비밀번호가 서로 일치하지 않습니다!');
+    // else if (joinfrm.zip1.value === '' || zip2.value === '') alert('우편번호를 확인하세요!');
+    // else if (joinfrm.addr1.value === '' || addr2.value === '') alert('주소를 확인하세요!');
+    // else if (joinfrm.email1.value === '' || email2.value === '') alert('이메일을 확인하세요!');
+    else if (joinfrm.tel2.value === '' || joinfrm.tel3.value === '') alert('전화번호를 확인하세요!');
+    else if (joinfrm.grecaptcha.value === '') alert('자동가입방지를 확인하세요!');
+    else {
+        location.href = '/join/joinok';
+    }
+})
 
 // ------------------------------------------ joinok

@@ -113,7 +113,7 @@
                     <div class="row mb-3">
                         <label for="name2" class="col-3 col-form-label text-warning text-end">이름</label>
                         <div class="col-6">
-                            <input type="text" name="name2" id="name2" class="form-control border-warning">
+                            <input type="text" name="name" id="name2" class="form-control border-warning">
                         </div>
                     </div>
                     <div class="row mb-2">
