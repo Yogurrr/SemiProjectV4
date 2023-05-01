@@ -151,10 +151,10 @@
                 </div>
 
                 <div class="row col-11 offset-1 mb-5 align-items-center">
-                    <label for="g-recaptcha" class="col-2 form-label text-danger text-end">자동가입방지</label>
+                    <label for="grecaptcha" class="col-2 form-label text-danger text-end">자동가입방지</label>
                     <div class="col-3">
                         <div class="g-recaptcha" data-sitekey="6LdU4OskAAAAAGphv-UlASNVhJs3LGCNl6cfbJJr"></div>
-                        <input type="hidden" name="g-recaptcha" id="g-recaptcha">
+                        <input type="hidden" name="grecaptcha" id="grecaptcha">
                     </div>
                 </div>
 
