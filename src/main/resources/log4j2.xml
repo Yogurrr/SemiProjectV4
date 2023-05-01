@@ -10,7 +10,7 @@
         <Logger name="org.springframework" level="info"/>
         <Logger name="yogurrr.spring4mvc.semiprojectv4" level="info"/>
 
-        <Root level="error">
+        <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>

@@ -3,7 +3,7 @@
 <div id="main">
     <div class="row">
         <div class="col-12"><h1 class="display-3 text-center fw-bold p-3">初期日 PROJECT 補完計劃</h1></div>
-        <div class="col-8 offset-3">
+        <div class="col-8 offset-2">
             <img src="/assets/img/cat.jpg" class="img-fluid">
         </div>
     </div>
