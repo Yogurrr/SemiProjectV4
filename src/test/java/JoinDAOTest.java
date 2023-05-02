@@ -20,4 +20,13 @@ public class JoinDAOTest {
         assertNotNull(sqlSession.selectList("join.findZipcode", dong));
         System.out.println(sqlSession.selectList("join.findZipcode", dong));
     }
+
+    @Test
+    public void checkUserid() {
+        String uid = "aaa111a";   // 존재하지 않는 아이디 검사
+        assertEquals(0,(int)sqlSession.selectOne("join.selectOneUid", uid));
+
+        uid = "aaa111";   // 존재하는 아이디 검사
+        assertEquals(1,(int)sqlSession.selectOne("join.selectOneUid", uid));
+    }
 }
