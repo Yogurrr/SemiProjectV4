@@ -54,7 +54,7 @@ joinbtn?.addEventListener('click', () => {
     // else if (joinfrm.addr1.value === '' || addr2.value === '') alert('주소를 확인하세요!');
     // else if (joinfrm.email1.value === '' || email2.value === '') alert('이메일을 확인하세요!');
     else if (joinfrm.tel2.value === '' || joinfrm.tel3.value === '') alert('전화번호를 확인하세요!');
-    else if (joinfrm.grecaptcha.value === '') alert('자동가입방지를 확인하세요!');
+    // else if (joinfrm.grecaptcha.value === '') alert('자동가입방지를 확인하세요!');
     else {
         location.href = '/join/joinok';
     }
