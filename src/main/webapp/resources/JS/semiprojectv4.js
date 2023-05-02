@@ -51,6 +51,9 @@ const sendzip = document.querySelector('#sendzip');
 const zipmodal = document.querySelector('#zipmodal');
 const zpmdbtn = document.querySelector('#zpmdbtn');
 const email3 = document.querySelector('#email3');
+const userid = document.querySelector('#uid');
+const uidmsg = document.querySelector('#uidmsg');
+const pwdmsg = document.querySelector('#pwdmsg');
 
 const modal = new bootstrap.Modal(zipmodal, {});
 
@@ -63,9 +66,11 @@ joinbtn?.addEventListener('click', () => {
     else if (joinfrm.addr1.value === '' || addr2.value === '') alert('주소를 확인하세요!');
     else if (joinfrm.email1.value === '' || email2.value === '') alert('이메일을 확인하세요!');
     else if (joinfrm.tel2.value === '' || joinfrm.tel3.value === '') alert('전화번호를 확인하세요!');
-    else if (joinfrm.grecaptcha.value === '') alert('자동가입방지를 확인하세요!');
+    else if (grecaptcha.getResponse() === '') alert('자동가입방지를 확인하세요!');
     else {
-        location.href = '/join/joinok';
+        joinfrm.method = 'post';
+        joinfrm.action = '/join/joinok';
+        joinfrm.submit();
     }
 })
 
@@ -85,7 +90,7 @@ const showzipaddr = (jsons) => {
     jsons = JSON.parse(jsons);
     let addrs = '';
     jsons.forEach(function (data, idx) {
-        let bunji = (data['bunji'] !== 'null') ? data['bunji'] : '';
+        let bunji = (data['bunji'] !== null) ? data['bunji'] : '';
         addrs += `<option>${data['zipcode']} ${data['sido']} ${data['gugun']} ${data['dong']} ${bunji}</option>`;
     });
     while(addrlist.lastChild) {
@@ -128,6 +133,21 @@ email3?.addEventListener('change', () => {
         joinfrm.email2.readOnly = true;
         joinfrm.email2.value = email3.value;
     }
+})
+
+dong?.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {   // 엔터키를 누르면
+        e.preventDefault();   // 이벤트 전파 방지
+    }
+})
+
+userid?.addEventListener('blur', () => {
+    if (userid.value === '') {
+        alert('중복 검사할 아이디를 입력하세요!!');
+        return;
+    }
+    const url = '/join/checkuid?uid=' + userid.value;
+    fetch(url).then(response => response.text()).then(text => alert(text));
 })
 
 // ------------------------------------------ joinok

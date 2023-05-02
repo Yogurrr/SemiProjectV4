@@ -8,7 +8,7 @@
     </select>
 
     <select id="selectOneUid" statementType="PREPARED" parameterType="String"
-            resultType="Int">
+            resultType="int">
         select count(USERID) cnt from MEMBER where USERID = #{uid}
     </select>
 </mapper>
