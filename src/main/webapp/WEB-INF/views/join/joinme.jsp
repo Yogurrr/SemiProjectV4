@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="row col-11 offset-1 mb-3 align-items-center">
-                    <label for="jumin1" class="col-2 form-label text-danger text-end">주민번호</label>
+                    <label for="jumin1a" class="col-2 form-label text-danger text-end">주민번호</label>
                     <div class="col-3">
                         <input type="text" name="jumin1" id="jumin1a" readonly
                                class="form-control border-danger bg-light" value="${mb.jumin1}">
@@ -97,7 +97,7 @@
                                class="form-control border-danger bg-light" readonly>
                     </div>
                     <div class="col-3">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#zipmodal">
+                        <button type="button" class="btn btn-dark" id="zpmdbtn">
                             <i class="fas fa-question-circle"></i> 우편번호 찾기 </button>
                     </div>
                 </div>
