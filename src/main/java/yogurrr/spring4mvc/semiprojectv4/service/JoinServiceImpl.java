@@ -55,7 +55,9 @@ public class JoinServiceImpl implements JoinService {
     public boolean newMember(Member m) {return false;}
 
     @Override
-    public boolean checkUserid(String uid) {return false;}
+    public int checkUserid(String uid) {
+        return jndao.selectOneUserid(uid);
+    }
 
     @Override
     public boolean loginMember(Member m) {return false;}
