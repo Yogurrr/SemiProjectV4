@@ -44,20 +44,42 @@ chkbtn2?.addEventListener('click', () => {
 // ------------------------------------------ joinme
 const joinfrm = document.forms.joinfrm;
 const joinbtn = document.querySelector('#joinbtn');
+const dong = document.querySelector('#dong');
+const zipbtn = document.querySelector('#findzipbtn');
+const addrlist = document.querySelector('#addrlist');
 
 joinbtn?.addEventListener('click', () => {
     if (joinfrm.uid.value === '') alert('아이디를 입력하세요!');
     else if (joinfrm.pwd.value === '') alert('비밀번호를 입력하세요!');
     else if (joinfrm.repwd.value === '') alert('비밀번호 확인을 입력하세요!');
     else if (joinfrm.pwd.value !== joinfrm.repwd.value) alert('비밀번호가 서로 일치하지 않습니다!');
-    // else if (joinfrm.zip1.value === '' || zip2.value === '') alert('우편번호를 확인하세요!');
-    // else if (joinfrm.addr1.value === '' || addr2.value === '') alert('주소를 확인하세요!');
-    // else if (joinfrm.email1.value === '' || email2.value === '') alert('이메일을 확인하세요!');
+    else if (joinfrm.zip1.value === '' || zip2.value === '') alert('우편번호를 확인하세요!');
+    else if (joinfrm.addr1.value === '' || addr2.value === '') alert('주소를 확인하세요!');
+    else if (joinfrm.email1.value === '' || email2.value === '') alert('이메일을 확인하세요!');
     else if (joinfrm.tel2.value === '' || joinfrm.tel3.value === '') alert('전화번호를 확인하세요!');
-    // else if (joinfrm.grecaptcha.value === '') alert('자동가입방지를 확인하세요!');
+    else if (joinfrm.grecaptcha.value === '') alert('자동가입방지를 확인하세요!');
     else {
         location.href = '/join/joinok';
     }
+})
+
+const showzipaddr = (jsons) => {
+    // for(idx in jsons) {
+    //     console.log(jsons[idx]);
+    // }
+    jsons = JSON.parse(jsons);
+    let addrs = '';
+    jsons.forEach(function (data, idx) {
+        addrs += `<option>${data['zipcode']} ${data['sido']} ${data['gugun']} ${data['dong']}</option>`;
+    });
+    while(addrlist.lastChild) {
+        addrlist.removeChild(addrlist.lastChild);
+    }
+    addrlist.innerHTML = addrs;
+};
+zipbtn?.addEventListener('click', () => {
+    const url = '/join/zipcode?dong=' + dong.value;
+    fetch(url).then(response => response.text()).then(text => showzipaddr(text));
 })
 
 // ------------------------------------------ joinok

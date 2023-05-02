@@ -233,7 +233,7 @@
                     </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-danger" id="sendzip">
                         <i class="fas fa-check-square"></i> 선택하고 닫기
                     </button>
                 </div>
