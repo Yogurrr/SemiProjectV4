@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-auto">
                             <span id="repwdmsg" class="form-text">
-                                이전 항목에서 입력했던 비밀번호를 한 번 더 입력하세요
+                                이전 항목에서 입력했던 비밀번호를 한 번 더 입력하세요.
                             </span>
                     </div>
                 </div>
