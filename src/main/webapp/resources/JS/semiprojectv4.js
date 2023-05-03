@@ -53,9 +53,9 @@ const zpmdbtn = document.querySelector('#zpmdbtn');
 const email3 = document.querySelector('#email3');
 const userid = document.querySelector('#userid');
 const uidmsg = document.querySelector('#uidmsg');
-const passwd = document.querySelector('#pwd');
+const passwd = document.querySelector('#passwd');
 const pwdmsg = document.querySelector('#pwdmsg');
-const repasswd = document.querySelector('#repwd');
+const repasswd = document.querySelector('#repasswd');
 const repwdmsg = document.querySelector('#repwdmsg');
 
 let modal = null;
@@ -65,9 +65,9 @@ try {
 
 joinbtn?.addEventListener('click', () => {
     if (joinfrm.userid.value === '') alert('아이디를 입력하세요!');
-    else if (joinfrm.pwd.value === '') alert('비밀번호를 입력하세요!');
-    else if (joinfrm.repwd.value === '') alert('비밀번호 확인을 입력하세요!');
-    else if (joinfrm.pwd.value !== joinfrm.repwd.value) alert('비밀번호가 서로 일치하지 않습니다!');
+    else if (joinfrm.passwd.value === '') alert('비밀번호를 입력하세요!');
+    else if (joinfrm.repasswd.value === '') alert('비밀번호 확인을 입력하세요!');
+    else if (joinfrm.passwd.value !== joinfrm.repasswd.value) alert('비밀번호가 서로 일치하지 않습니다!');
     else if (joinfrm.zip1.value === '' || zip2.value === '') alert('우편번호를 확인하세요!');
     else if (joinfrm.addr1.value === '' || addr2.value === '') alert('주소를 확인하세요!');
     else if (joinfrm.email1.value === '' || email2.value === '') alert('이메일을 확인하세요!');
@@ -180,7 +180,7 @@ repasswd?.addEventListener('blur', () => {
     let pmsg = '비밀번호가 서로 일치하지 않습니다!';
     repwdmsg.style.color = 'red';
 
-    if(repasswd.value === joinfrm.pwd.value) {
+    if(repasswd.value === joinfrm.passwd.value) {
         pmsg = '비밀번호가 서로 일치합니다!';
         repwdmsg.style.color = 'blue';
     }
