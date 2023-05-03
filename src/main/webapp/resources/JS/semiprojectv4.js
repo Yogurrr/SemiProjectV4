@@ -51,17 +51,20 @@ const sendzip = document.querySelector('#sendzip');
 const zipmodal = document.querySelector('#zipmodal');
 const zpmdbtn = document.querySelector('#zpmdbtn');
 const email3 = document.querySelector('#email3');
-const userid = document.querySelector('#uid');
+const userid = document.querySelector('#userid');
 const uidmsg = document.querySelector('#uidmsg');
 const passwd = document.querySelector('#pwd');
 const pwdmsg = document.querySelector('#pwdmsg');
 const repasswd = document.querySelector('#repwd');
 const repwdmsg = document.querySelector('#repwdmsg');
 
-const modal = new bootstrap.Modal(zipmodal, {});
+let modal = null;
+try {
+    const modal = new bootstrap.Modal(zipmodal, {});
+} catch (e) { }
 
 joinbtn?.addEventListener('click', () => {
-    if (joinfrm.uid.value === '') alert('아이디를 입력하세요!');
+    if (joinfrm.userid.value === '') alert('아이디를 입력하세요!');
     else if (joinfrm.pwd.value === '') alert('비밀번호를 입력하세요!');
     else if (joinfrm.repwd.value === '') alert('비밀번호 확인을 입력하세요!');
     else if (joinfrm.pwd.value !== joinfrm.repwd.value) alert('비밀번호가 서로 일치하지 않습니다!');
@@ -185,3 +188,8 @@ repasswd?.addEventListener('blur', () => {
 })
 
 // ------------------------------------------ joinok
+const go2index = document.querySelector('#go2index');
+
+go2index?.addEventListener('click', () => {
+    location.href = '/';
+});

@@ -7,8 +7,12 @@
         select * from zipcode where dong like #{dong}
     </select>
 
-    <select id="selectOneUid" statementType="PREPARED" parameterType="String"
-            resultType="int">
-        select count(USERID) cnt from MEMBER where USERID = #{uid}
+    <select id="selectOneUid" statementType="PREPARED" parameterType="String" resultType="int">
+        select count(USERID) cnt from MEMBER2 where USERID = #{uid}
     </select>
+
+    <insert id="insertMember" statementType="PREPARED" parameterType="yogurrr.spring4mvc.semiprojectv4.model.Member">
+        insert into MEMBER2 (name, jumin1, jumin2, userid, passwd, zipcode, addr1, addr2, email, phone)
+        values (#{name}, #{jumin1}, #{jumin2}, #{userid}, #{passwd}, #{zipcode}, #{addr1}, #{addr2}, #{email}, #{phone});
+    </insert>
 </mapper>

@@ -53,9 +53,9 @@
                     </div>
                 </div>
                 <div class="row col-11 offset-1 mb-3 align-items-center">
-                    <label for="uid" class="col-2 form-label text-danger text-end">아이디</label>
+                    <label for="userid" class="col-2 form-label text-danger text-end">아이디</label>
                     <div class="col-3">
-                        <input type="text" name="uid" id="uid"
+                        <input type="text" name="userid" id="userid"
                                class="form-control border-danger">
                     </div>
                     <div class="col-auto">
@@ -65,9 +65,9 @@
                     </div>
                 </div>
                 <div class="row col-11 offset-1 mb-3 align-items-center">
-                    <label for="pwd" class="col-2 form-label text-danger text-end">비밀번호</label>
+                    <label for="passwd" class="col-2 form-label text-danger text-end">비밀번호</label>
                     <div class="col-3">
-                        <input type="password" name="pwd" id="pwd"
+                        <input type="password" name="passwd" id="passwd"
                                class="form-control border-danger">
                     </div>
                     <div class="col-auto">
@@ -77,9 +77,9 @@
                     </div>
                 </div>
                 <div class="row col-11 offset-1 mb-3 align-items-center">
-                    <label for="repwd" class="col-2 form-label text-danger text-end">비밀번호 확인</label>
+                    <label for="repasswd" class="col-2 form-label text-danger text-end">비밀번호 확인</label>
                     <div class="col-3">
-                        <input type="password" name="repwd" id="repwd"
+                        <input type="password" name="repasswd" id="repasswd"
                                class="form-control border-danger">
                     </div>
                     <div class="col-auto">
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="row col-11 offset-1 mb-3 align-items-center">
-                    <label for="repwd" class="col-2 form-label text-danger text-end">우편번호</label>
+                    <label for="zip1" class="col-2 form-label text-danger text-end">우편번호</label>
                     <div class="col-1">
                         <input type="text" name="zip1" id="zip1"
                                class="form-control border-danger bg-light" readonly>
