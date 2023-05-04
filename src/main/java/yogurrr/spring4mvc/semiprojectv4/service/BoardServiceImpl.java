@@ -18,4 +18,9 @@ public class BoardServiceImpl implements BoardService {
         int stbno = (cpage - 1) * 25;
         return bddao.selectBoard(stbno);
     }
+
+    @Override
+    public int countBoard() {
+        return bddao.countBoard();
+    }
 }
