@@ -10,8 +10,8 @@
         <div class=" row offset-2 col-6">
             <div class="col-4">
                 <select class="form-select" id="findtype">
-                    <option value="subject">제목</option>
-                    <option value="sbjcont">제목 + 내용</option>
+                    <option value="title">제목</option>
+                    <option value="titcont">제목 + 내용</option>
                     <option value="contents">내용</option>
                     <option value="userid">작성자</option>
                 </select>
@@ -41,7 +41,7 @@
             <table class="table table-striped thborder">
                 <thead class="thbg">
                     <tr>
-                        <th style="width: 7%;">번호</th>
+                        <th style="width: 7%;" id="bno"><a href="contents">번호</a></th>
                         <th style="text-align: center">제목</th>
                         <th style="width: 13%;">작성자</th>
                         <th style="width: 13%;">작성일</th>
@@ -70,7 +70,7 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>2</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
                         <td>yogurrr</td>
                         <td>2023-05-04</td>
@@ -78,7 +78,7 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <td>1</td>
+                        <td>3</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
                         <td>yogurrr</td>
                         <td>2023-05-04</td>
