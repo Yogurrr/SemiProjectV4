@@ -1,4 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <div id="main">
     <div class="mt-5">
@@ -41,7 +43,7 @@
             <table class="table table-striped thborder">
                 <thead class="thbg">
                     <tr>
-                        <th style="width: 7%;" id="bno"><a href="contents">번호</a></th>
+                        <th style="width: 7%;" id="bno">번호</th>
                         <th style="text-align: center">제목</th>
                         <th style="width: 13%;">작성자</th>
                         <th style="width: 13%;">작성일</th>
@@ -61,126 +63,16 @@
                         <th>777</th>
                         <th>777</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td>yogurrr</td>
-                        <td>2023-05-04</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
+                    <c:forEach items="${bdlist}" var="bd">
+                        <tr>
+                            <td>${bd.bno}</td>
+                            <td>${bd.title}</td>
+                            <td>${bd.userid}</td>
+                            <td>${fn:substring(bd.regdate, 0, 10)}</td>
+                            <td>${bd.thumbs}</td>
+                            <td>${bd.views}</td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table>
         </div>
