@@ -112,11 +112,14 @@
         <div class="offset-2 col-8 text-end">
             <nav>
                 <ul class="pagination justify-content-center">
+
+                    <c:if test="${cpg gt 1}"><li class="page-item"></c:if>
+                    <c:if test="${cpg le 1}"><li class="page-item disabled"></c:if>
                     <a class="page-link" href="${pglink}1">처음</a></li>
 
                     <c:if test="${cpg - 1 gt 0}"><li class="page-item"></c:if>
                     <c:if test="${cpg - 1 le 0}"><li class="page-item disabled"></c:if>
-                        <a class="page-link" href="${pglink}${cpg-1}">이전</a></li>
+                        <a class="page-link" href="${pglink}${cpg - 1}">이전</a></li>
 
                     <c:forEach var="i" begin="${stpg}" end="${stpg + 10 - 1}">
                         <c:if test="${i le cntpg}">
@@ -128,9 +131,11 @@
 
                     <c:if test="${cpg lt cntpg}"><li class="page-item"></c:if>
                     <c:if test="${cpg ge cntpg}"><li class="page-item disabled"></c:if>
-                        <a class="page-link" href="${pglink}${cpg+1}">다음</a></li>
+                        <a class="page-link" href="${pglink}${cpg + 1}">다음</a></li>
 
-                    <a class="page-link" href="${pglink}${cntpg}">끝</a></li>
+                    <c:if test="${cpg lt cntpg}"><li class="page-item"></c:if>
+                    <c:if test="${cpg ge cntpg}"><li class="page-item disabled"></c:if>
+                        <a class="page-link" href="${pglink}${cntpg}">끝</a></li>
                 </ul>
             </nav>
         </div>
