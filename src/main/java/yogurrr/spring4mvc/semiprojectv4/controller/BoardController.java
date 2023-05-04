@@ -19,6 +19,7 @@ public class BoardController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("board/list.tiles");
         mv.addObject("bdlist", bdsrv.readBoard(cpg));
+        mv.addObject("cpg", cpg);
 
         return mv;
     }
