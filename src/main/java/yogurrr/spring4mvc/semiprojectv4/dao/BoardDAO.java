@@ -5,5 +5,5 @@ import yogurrr.spring4mvc.semiprojectv4.model.Board;
 import java.util.List;
 
 public interface BoardDAO {
-    List<Board> selectBoard();
+    List<Board> selectBoard(int stbno);
 }
