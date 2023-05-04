@@ -7,4 +7,5 @@
 .thborder { border-bottom: 3px solid black; border-top: 3px solid black; }
 .thbg { background: #dff0d8 }
 tr { border-bottom: 1px solid silver }
-th:first-child { text-align: center }
+th:first-child, th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6) { text-align: center }
+td:first-child, td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6) { text-align: center }

@@ -7,7 +7,25 @@
     </div>
 
     <div class="row mt-5">
-        <div class="offset-2 col-8 text-end">
+        <div class=" row offset-2 col-6">
+            <div class="col-4">
+                <select class="form-select" id="findtype">
+                    <option value="subject">제목</option>
+                    <option value="sbjcont">제목 + 내용</option>
+                    <option value="contents">내용</option>
+                    <option value="userid">작성자</option>
+                </select>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" id="findkey">
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-magnifying-glass"></i>검색하기
+                </button>
+            </div>
+        </div>
+        <div class="col-2 text-end">
             <button type="button" class="btn btn-light">
                 <i class="fa fa-plus-circle"></i>새글쓰기
             </button>
@@ -33,135 +51,135 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th style="text-align: center">공지</th>
+                        <th>공지</th>
                         <th>
                             <span class="badge text-bg-danger">HOT</span>
                             석가탄신일·성탄절 대체공휴일 확정…
                         </th>
-                        <th style="text-align: center">운영자</th>
-                        <th style="text-align: center">2023-05-04</th>
-                        <th style="text-align: center">777</th>
-                        <th style="text-align: center">777</th>
+                        <th>운영자</th>
+                        <th>2023-05-04</th>
+                        <th>777</th>
+                        <th>777</th>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">2</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td style="text-align: center">1</td>
+                        <td>1</td>
                         <td>비밀번호 없어도 된다고? 구글 ‘패스키’ 도입</td>
-                        <td style="text-align: center">yogurrr</td>
-                        <td style="text-align: center">2023-05-04</td>
-                        <td style="text-align: center">1</td>
-                        <td style="text-align: center">1</td>
+                        <td>yogurrr</td>
+                        <td>2023-05-04</td>
+                        <td>1</td>
+                        <td>1</td>
                     </tr>
                 </tbody>
             </table>
