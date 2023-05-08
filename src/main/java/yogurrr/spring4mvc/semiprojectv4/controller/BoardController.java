@@ -26,6 +26,21 @@ public class BoardController {
         return mv;
     }
 
+    // 검색 처리
+    @GetMapping("/find")
+    public ModelAndView find(int cpg, String ftype, String fkey) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("board/list.tiles");
+        mv.addObject("bdlist", bdsrv.readBoard(cpg, ftype, fkey));
+        mv.addObject("cpg", cpg);
+        mv.addObject("stpg", ((cpg - 1) / 10) * 10 + 1);
+        mv.addObject("cntpg", bdsrv.countBoard(ftype, fkey));
+
+        return mv;
+    }
+
+    // -------------------------------
+
     @GetMapping("/contents")
     public String contents() {
         return "board/contents.tiles";
