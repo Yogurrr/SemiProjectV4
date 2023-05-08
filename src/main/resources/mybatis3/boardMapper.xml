@@ -27,5 +27,8 @@
         <if test="ftype == 'titcont'">where title like concat('%', #{fkey}, '%') or contents like concat('%', #{fkey}, '%')</if>
     </select>
 
+    <insert id="insertBoard" statementType="PREPARED" parameterType="yogurrr.spring4mvc.semiprojectv4.model.Board">
+        insert into BOARD2 (title, userid, contents) VALUES (#{title}, #{userid}, #{contents});
+    </insert>
 
 </mapper>
