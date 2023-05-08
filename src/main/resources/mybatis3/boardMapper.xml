@@ -13,12 +13,18 @@
             resultType="yogurrr.spring4mvc.semiprojectv4.model.Board">
         select bno, title, userid, thumbs, views, regdate from BOARD2
         <if test="ftype != 'titcont'">where ${ftype} like concat(#{fkey}, '%')</if>
-        <if test="ftype == 'titcont'">where title like concat(#{fkey}, '%') or contents like concat(#{fkey}, '%')</if>
+        <if test="ftype == 'titcont'">where title like concat('%', #{fkey}, '%') or contents like concat('%', #{fkey}, '%')</if>
         order by bno desc limit #{stbno}, 25;
     </select>
 
     <select id="countBoard" statementType="PREPARED" resultType="int">
         select ceil(count(bno)/25) cnt from BOARD2;
+    </select>
+
+    <select id="countFindBoard" statementType="PREPARED" parameterType="map" resultType="int">
+        select ceil(count(bno)/25) cnt from BOARD2
+        <if test="ftype != 'titcont'">where ${ftype} like concat('%', #{fkey}, '%');</if>
+        <if test="ftype == 'titcont'">where title like concat('%', #{fkey}, '%') or contents like concat('%', #{fkey}, '%')</if>
     </select>
 
 
