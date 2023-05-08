@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="col-2 text-end">
-            <button type="button" class="btn btn-light">
+            <button type="button" class="btn btn-light" id="go2write">
                 <i class="fa fa-plus-circle"></i> 새글쓰기
             </button>
         </div>
@@ -148,4 +148,4 @@
     </div>
 </div>
 
-<script src="/assets/JS/board.js"></script>
+<script src="/assets/js/board.js"></script>

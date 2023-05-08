@@ -19,6 +19,6 @@ loginbtn?.addEventListener('click', () => {
     }
 })
 
-lgoutbtn.addEventListener('click', () => {
+lgoutbtn?.addEventListener('click', () => {
     location.href = '/logout';
 })
