@@ -17,7 +17,7 @@ const go2list = document.querySelector('#go2list')
 const writebtn = document.querySelector('#writebtn')
 
 go2write?.addEventListener('click', () => { location.href = '/board/write'; })
-go2list?.addEventListener('click', () => { location.href = '/board/list' })
+go2list?.addEventListener('click', () => { location.href = '/board/list?cpg=1' })
 writebtn?.addEventListener('click', () => {
     const bdfrm = document.forms.bdfrm;
     if (bdfrm.title.value === '') alert('제목을 작성하세요!');
