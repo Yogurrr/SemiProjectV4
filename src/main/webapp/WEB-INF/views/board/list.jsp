@@ -25,12 +25,18 @@
     // ex) cp = 11 : 이전 11 12 13 14 15 16 17 18 19 20 다음
     // ex) cp = 15 : 이전 11 12 13 14 15 16 17 18 19 20 다음
     // ex) cp = 23 : 이전 21 22 23 24 25 26 27 28 29 30 다음
-    // ex) cp = 52: 이전 51 52 53 54 55
+    // ex) cp = 52 : 이전 51 52 53 54 55
     // startPage = ((cp - 1) / 10) * 10 + 1
     // endPage = startPage + 10 - 1
 %>
 
+<%-- 검색 기능 작동 X 목록 조회 --%>
 <c:set var="pglink" value="list?cpg=" />
+
+<%-- 검색 기능 작동 O 목록 조회 --%>
+<c:if test="${not empty param.fkey}">
+    <c:set var="pglink" value="find?ftype=${param.ftype}&fkey=${param.fkey}&cpg=" />
+</c:if>
 
 <div id="main">
     <div class="mt-5">
