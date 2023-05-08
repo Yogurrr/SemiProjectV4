@@ -41,6 +41,10 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public int countBoard(String ftype, String fkey) {
-        return bddao.countBoard();
+        Map<String, Object> params = new HashMap<>();
+        params.put("ftype", ftype);
+        params.put("fkey", fkey);
+
+        return bddao.countBoard(params);
     }
 }

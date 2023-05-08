@@ -49,10 +49,10 @@
                 </select>
             </div>
             <div class="col-4">
-                <input type="text" class="form-control" id="findkey">
+                <input type="text" class="form-control" id="findkey" value="${param.fkey}">
             </div>
             <div class="col-3">
-                <button type="button" class="btn btn-light">
+                <button type="button" class="btn btn-light" id="findbtn">
                     <i class="fa-solid fa-magnifying-glass"></i> 검색하기
                 </button>
             </div>
@@ -142,4 +142,4 @@
     </div>
 </div>
 
-<script src="/assets/js/board.js"></script>
+<script src="/assets/JS/board.js"></script>
